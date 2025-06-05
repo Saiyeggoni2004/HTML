@@ -1,0 +1,134 @@
+Certainly, I can provide you with code examples. The sources explain various HTML tags and the standard structure of an HTML document, providing examples of how these are used to create web pages.
+
+Here are some code examples and their explanations
+
+### Standard HTML Document Structure
+
+A standard HTML document begins with `<!DOCTYPE html>` to specify that it's an HTML5 document. It then contains an `<html>` tag, which encapsulates the entire HTML content. Inside the `<html>` tag, there are two main parts: the `<head>` part and the `<body>` part.
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Learning HTML</title>
+    <meta charset="UTF-8">
+</head>
+<body>
+    This is HTML Document.
+</body>
+</html>
+```
+*   `<!DOCTYPE html>`: This is the first thing you write in an HTML document. It specifies that it is an HTML5 document. It should be written exactly as shown, with `DOCTYPE` in capital letters and `html` in small letters.
+*   `<html>`: This tag marks the beginning and end of the entire HTML content.
+*   `<head>`: This part contains extra information about the document for the browser or search engines, not for the user.
+    *   `<title>`: The text placed inside the `<title>` tag appears as the name of the tab when the website is opened in a browser. For example, `<title>Learning HTML</title>` would display "HTML Learning" as the tab name.
+    *   `<meta charset="UTF-8">`: This meta tag is used for character encoding and is important for displaying different languages correctly.
+*   `<body>`: This part contains the actual data or content that is displayed to the user on the web page, such as text, images, videos, or forms.
+
+### Heading Tags
+
+HTML has six types of heading tags, from `<h1>` to `<h6>`, with `<h1>` being the largest and `<h6>` being the smallest. The `<h1>` tag should generally be used only once per document for search engine optimisation purposes.
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Headings Example</title>
+</head>
+<body>
+    <h1>This is Heading One</h1>
+    <h2>This is Heading Two</h2>
+    <h3>This is Heading Three</h3>
+    <h4>This is Heading Four</h4>
+    <h5>This is Heading Five</h5>
+    <h6>This is Heading Six</h6>
+</body>
+</html>
+```
+*   `<h1>` to `<h6>`: These tags are used for different levels of headings. The browser automatically applies formatting (like size and boldness) based on the specific heading tag used.
+
+### Paragraph Tag
+
+The `<p>` tag is used to define paragraphs of text in HTML.
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Paragraph Example</title>
+</head>
+<body>
+    <p>This is the first paragraph of text on my web page.</p>
+    <p>This is another paragraph, which will appear on a new line in the browser.</p>
+</body>
+</html>
+```
+*   `<p>`: Content written inside `<p>` tags is treated as a paragraph, and browsers will display it with default paragraph formatting, usually on a new line.
+
+### Pre-formatted Text Tag
+
+The `<pre>` tag is used to display text exactly as it is written in the HTML code, preserving spaces, new lines, and other formatting.
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Pre-formatted Text Example</title>
+</head>
+<body>
+    <pre>
+        This is a pre-formatted text.
+        It will preserve all
+             spaces and
+        new lines.
+    </pre>
+</body>
+</html>
+```
+*   `<pre>`: Whatever you write inside this tag, including multiple spaces or new lines, will be displayed exactly as typed in the output.
+
+### Bold and Strong Tags
+
+To make text appear thicker or bolder, you can use the `<b>` (bold) or `<strong>` (strong) tags.
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Bold and Strong Example</title>
+</head>
+<body>
+    <p>This is some <b>bold text</b> using the b tag.</p>
+    <p>This is some <strong>strong text</strong> using the strong tag.</p>
+</body>
+</html>
+```
+*   `<b>`: This tag makes the text visually bold.
+*   `<strong>`: This tag also makes text bold, but it additionally indicates that the content has strong importance, which is the preferred way in HTML5 for bold text.
+
+### Italic Tag
+
+To display text in an italic or cross-like format, you can use the `<i>` (italic) tag.
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Italic Text Example</title>
+</head>
+<body>
+    <p>This is some <i>italic text</i>.</p>
+</body>
+</html>
+```
+*   `<i>`: Content written inside the `<i>` tag will be displayed in an italic font style.
+
+### General Tag Structure
+
+Most HTML tags have an **opening tag** and a **closing tag**.
+*   An **opening tag** looks like `<tagname>`, for example, `<h1>`.
+*   A **closing tag** includes a forward slash before the tag name, like `</tagname>`, for example, `</h1>`.
+*   The text or information placed between the opening and closing tags is referred to as **content**.
+*   An **HTML element** is the combination of an opening tag, its content, and a closing tag. For instance, `<h1>This is a heading</h1>` is an HTML element.
+
+Some tags, like `<br>` (break tag) or `<hr>` (horizontal rule tag), are self-closing and do not require a separate closing tag because they don't enclose content. However, it is generally recommended to use standard HTML structure following W3C rules to avoid errors.
