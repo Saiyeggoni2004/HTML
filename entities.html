@@ -1,0 +1,111 @@
+HTML entities, which are special characters used to display symbols or reserved characters in web pages that cannot be easily typed on a keyboard or would otherwise be interpreted as HTML code. It explains that these entities are crucial for rendering characters like greater than (>) or less than (<) signs, copyright symbols (©), registered trademark symbols (®), and currency symbols such as the Indian Rupee symbol. The video also covers the use of non-breaking spaces (NBSP) to add extra spacing between words and the tag for displaying pre-formatted text, preserving whitespace and line breaks that a browser would typically ignore. The core concept is that HTML entities provide a mechanism to ensure such characters are displayed correctly on a webpage rather than being misinterpreted by the browser.
+
+
+HTML entities are special codes used in HTML to **display characters that are difficult or impossible to type directly from a keyboard, or to display characters that have a special meaning in HTML** (like the less than `<` or greater than `>` symbols).
+
+Here's a detailed explanation with examples:
+
+### What are HTML Entities?
+When you want to display certain symbols or characters on a webpage that are not standard keyboard inputs, or if those characters are part of HTML syntax itself (like `<` or `>`), you use HTML entities. If you type a symbol like `<` directly, the browser might interpret it as the start of an HTML tag, not as a character to be displayed. HTML entities resolve this issue by allowing you to display these special characters without causing conflicts with HTML parsing.
+
+### Why are HTML Entities Used?
+*   **To display reserved HTML characters:** Characters like `<` (less than), `>` (greater than), or `"` (double quotation mark) have special meanings in HTML. If you want to show these characters as content, you need to use entities so the browser doesn't misinterpret them as part of the HTML structure.
+*   **To display symbols not found on a keyboard:** Many symbols, such as copyright `©`, registered `®`, trademark `™`, or currency symbols (like the Indian Rupee `₹`), are not easily typed using a standard keyboard. Entities provide a way to include these on a webpage.
+*   **To control spacing and formatting:** Entities like `&nbsp;` (non-breaking space) are used to add multiple spaces where a browser would normally ignore them, or to prevent a line break at a specific point.
+
+### How to Use HTML Entities
+You can use HTML entities in two main ways:
+
+1.  **Using an Entity Name:** This involves using a mnemonic name followed by a semicolon (e.g., `&name;`).
+2.  **Using an Entity Number/Code:** This involves using a numeric code (decimal or hexadecimal) preceded by an ampersand and hash (e.g., `&#number;` or `&#xhexcode;`).
+
+Both methods achieve the same result.
+
+### Examples of HTML Entities:
+
+*   **Less Than Symbol (`<`) and Greater Than Symbol (`>`):**
+    *   To display a **less than symbol**, you would use `&lt;` or `&#60;`.
+    *   To display a **greater than symbol**, you would use `&gt;` or `&#62;`.
+    *   *Example:* If you want to show "The answer is < 10", you would write:
+        ```html
+        <p>The answer is &lt; 10</p>
+        ```
+        or
+        ```html
+        <p>The answer is &#60; 10</p>
+        ```
+        If you just type `<p>The answer is < 10</p>`, the browser might treat `< 10` as a malformed tag.
+
+*   **Copyright Symbol (`©`):**
+    *   To display the **copyright symbol**, you would use `&copy;` or `&#169;`.
+    *   *Example:*
+        ```html
+        <p>&copy; 2024 My Website</p>
+        ```
+
+*   **Registered Symbol (`®`):**
+    *   To display the **registered symbol**, you would use `&reg;` or `&#174;`.
+    *   *Example:*
+        ```html
+        <p>Product X &reg;</p>
+        ```
+
+*   **Trademark Symbol (`™`):**
+    *   To display the **trademark symbol**, you would use `&trade;` or `&#8482;`.
+    *   *Example:*
+        ```html
+        <p>Brand Y &trade;</p>
+        ```
+
+*   **Indian Rupee Symbol (`₹`):**
+    *   To display the **Indian Rupee symbol**, you would use its numeric code `&#8377;`.
+    *   *Example:*
+        ```html
+        <p>Price: &#8377;1000</p>
+        ```
+
+*   **Non-Breaking Space (` `):**
+    *   To add **multiple spaces** between words or elements that browsers would normally collapse into a single space, you can use `&nbsp;`. This also prevents a line break at that specific space.
+    *   *Example:* To create extra space between "Hello" and "World":
+        ```html
+        <p>Hello&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;World</p>
+        ```
+        In this example, five `&nbsp;` entities are used to create visible space between the words, whereas five normal spaces would likely be rendered as only one by the browser.
+
+*   **Double Quotation Mark (`"`):**
+    *   While not explicitly demonstrated with code in the source, `&quot;` is mentioned as an example of an entity name that can be used.
+
+### HTML Entities vs. The `<pre>` Tag
+While HTML entities are used for specific characters, the **`<pre>` tag** is another way to control how text is displayed, particularly regarding whitespace. The `<pre>` tag **preserves both spaces and line breaks exactly as they are written in the HTML code**, unlike regular HTML text where multiple spaces are collapsed and line breaks are ignored unless a `<br>` tag is used.
+
+However, even when using the `<pre>` tag, if you need to display special symbols like `<` or `>`, you would still use HTML entities within the `<pre>` block to ensure they are rendered correctly as characters rather than being interpreted as tags. The `<pre>` tag primarily addresses whitespace and line breaks, not the display of reserved HTML characters or non-keyboard symbols.
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>HTML Entities Demo</title>
+</head>
+<body>
+
+    <h2>HTML Entities Example</h2>
+
+    <p>The answer is &lt; 10</p>
+    <p>Price: &#8377;1000</p>
+    <p>&copy; 2024 My Website</p>
+    <p>BrandX &reg; is a trademark of BrandCo &trade;</p>
+    <p>He said: &quot;HTML entities are useful!&quot;</p>
+
+    <p>Extra spaces using &nbsp;entities:</p>
+    <p>Hello&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;World</p>
+
+    <h3>Using &lt;pre&gt; tag</h3>
+    <pre>
+function showSymbols() {
+    console.log("Less than: &lt;");
+    console.log("Greater than: &gt;");
+    console.log("Rupee: &#8377;");
+}
+    </pre>
+
+</body>
+</html>
