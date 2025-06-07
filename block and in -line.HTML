@@ -1,0 +1,61 @@
+**block-level elements**, such as `<h1>` through `<h6>` tags and paragraph tags, always **start on a new line** and cause subsequent content to also appear on a new line, even if there is space available on the previous line. Conversely, **inline elements**, like italic, bold, and anchor tags, **continue on the same line** as the preceding content, utilising available space before moving to the next line. The video demonstrates this by showing how italicised text can appear alongside previous content, whereas a paragraph tag forces a new line. The speaker provides examples of various tags, categorising them as either block-level or inline, to illustrate their distinct display behaviours within a web page.
+
+In HTML, elements are categorised as either **block-level** or **inline**, which dictates how they are displayed on a web page.
+
+**Block-level Elements**
+*   Block-level elements **always start on a new line** in the web browser.
+*   They effectively occupy the entire width available to them, even if their content does not fill that space. This means that any content following a block-level element will also start on a new line.
+
+Examples of **block-level elements** include:
+*   `h1`, `h2`, `h3`, `h4`, `h5`, `h6` (heading tags)
+*   `p` (paragraph tag)
+*   `div` (a generic container tag)
+*   `hr` (horizontal rule)
+*   `table`
+*   `ul` (unordered list)
+*   `ol` (ordered list)
+*   `dl` (description list)
+*   `dt` (descriptive term)
+*   `dd` (descriptive definition)
+*   `li` (list item)
+
+For instance, if you use a `div` tag, even if there's space available on the same line in the browser, the content following it will move to the next line because `div` is a block-level element. Similarly, a paragraph tag (`p`) will always start its content on a new line, and any subsequent content will also appear on a new line.
+
+**Inline Elements**
+*   Inline elements, unlike block-level elements, **do not start on a new line**.
+*   They only take up as much width as is necessary for their content.
+*   Content preceding an inline element will continue on the same line, and content following it will also remain on the same line if there is sufficient space.
+
+Examples of **inline elements** include:
+*   `i` (italic text)
+*   `b` (bold text)
+*   `a` (anchor tag for hyperlinks)
+*   `strong` (for strong importance)
+*   `em` (for emphasis)
+*   `sub` (subscript)
+*   `sup` (superscript)
+*   `img` (image)
+*   `br` (line break)
+*   `abbr` (abbreviation)
+
+For example, if you use an italic tag (`i`) or a bold tag (`b`), the text will appear on the same line as the content immediately before it, provided the previous element was also inline. An anchor tag (`a`) for a hyperlink will also display its text on the same line as the content surrounding it.
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Block-level vs Inline Elements</title>
+</head>
+<body>
+
+    <h1>This is a Block-Level Heading</h1>
+    <p>This is a block-level paragraph. It always starts on a new line.</p>
+
+    <div>This is a block-level div element.</div>
+    <p>Another paragraph after a div — it starts on a new line.</p>
+
+    <hr>
+
+    <p>This paragraph contains <i>italic</i>, <b>bold</b>, and <a href="#">a hyperlink</a> — all of which are inline elements and stay on the same line.</p>
+
+    <p>
+        Math Example: H<sub>2</sub>O and E = mc<sup>2</sup>
