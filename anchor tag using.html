@@ -1,0 +1,88 @@
+Anchor tag in HTML, a crucial element for creating hyperlinks between web pages or to external websites.** The video demonstrates how to **implement the `<a>` tag and its `href` attribute to specify the destination of a link.** It further illustrates the use of the **`target` attribute, specifically `_blank`, to open linked pages in a new browser tab.** The speaker also provides **practical examples of linking different HTML files within the same project directory and navigating between them**, including scenarios where files are located in subfolders. The content is presented in Telugu, with the **demonstrations focusing on the practical application of these HTML concepts for web page navigation.**
+
+
+The **anchor tag (`<a>`)** is used in HTML to create hyperlinks, allowing users to navigate from one webpage to another, or to different sections within the same page. It facilitates the connection of different web pages, creating a "web" of linked documents. The core attribute of the anchor tag is `href`, which specifies the destination URL (Uniform Resource Locator) or path of the linked resource.
+
+Here are some examples of how anchor tags are used:
+
+*   **Basic Anchor Tag Structure**
+    The general syntax for an anchor tag involves an opening `<a>` tag and a closing `</a>` tag, with the text or content that the user will click on placed between them. The `href` attribute is specified within the opening tag.
+    For instance, `<a>` is the tag name, and `href` is an attribute.
+    ```html
+    <a href="URL_OR_PATH">Link Text</a>
+    ```
+    The "Link Text" is what the user sees and clicks.
+
+*   **Example 1: Linking to an External Website**
+    To link to an external website, you provide the full URL in the `href` attribute.
+    *   **Linking to Twitter:**
+        ```html
+        <a href="www.twitter.com">Twitter</a>
+        ```
+        This creates a link where "Twitter" is the clickable text, and clicking it will take the user to the Twitter website.
+    *   **Linking to Amazon:**
+        ```html
+        <a href="www.amazon.com">Amazon</a>
+        ```
+        This example shows a link to `www.amazon.com` with "Amazon" as the visible link text.
+
+    You can also control how the linked page opens using the `target` attribute.
+    *   **Opening a link in a new tab:**
+        To make the linked page open in a new browser tab or window, you can use `target="_blank"`. This ensures the user's current page remains open.
+        ```html
+        <a href="www.twitter.com" target="_blank">Twitter</a>
+        ```
+        This allows the Twitter website to open in a new tab.
+
+*   **Example 2: Linking to a Local HTML File in the Same Directory**
+    You can link to other HTML files stored locally on your system. If the `about.html` file is in the same directory as your `index.html` file, you simply specify its filename in the `href` attribute.
+    *   From `index.html` to `about.html` (in the same folder):
+        ```html
+        <!-- In index.html -->
+        <a href="about.html">About</a>
+        ```
+        When the user clicks "About" on the `index.html` page, it will navigate to `about.html`, assuming both files are in the same location.
+
+*   **Example 3: Linking to a Local HTML File in a Subdirectory**
+    If your `about.html` file is located inside a subfolder (e.g., `About`) within the same directory as your `index.html` file, you need to specify the folder name followed by a forward slash and the file name.
+    *   From `index.html` to `about.html` in an `About` folder:
+        ```html
+        <!-- In index.html -->
+        <a href="About/about.html">About Page</a>
+        ```
+        This tells the browser to look inside the "About" folder for the `about.html` file.
+
+*   **Example 4: Linking to a Local HTML File in a Parent Directory**
+    Sometimes, you might need to link to a file that is in a directory "above" your current file's directory (a parent directory). You use `../` to move up one level in the directory structure.
+    *   From `contact.html` (located in a `Contact` folder, which is inside an `About` folder) back to `index.html` (which is in the main `HTML Classes` folder):
+        If `index.html` is in `HTML Classes`, and `contact.html` is in `HTML Classes/About/Contact/`, you would need to go up two levels to reach `index.html`.
+        ```html
+        <!-- In contact.html (located in HTML Classes/About/Contact/) -->
+        <a href="../../index.html">Home</a>
+        ```
+        Here, `../` takes you from `Contact` to `About`, and another `../` takes you from `About` to `HTML Classes` where `index.html` is located.
+
+It's important to note that by default, anchor tags display the linked text with an underline and in a specific colour.
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Anchor Tag Examples</title>
+</head>
+<body>
+    <h1>Anchor Tag Demo</h1>
+
+    <!-- External Links -->
+    <p><a href="https://www.twitter.com" target="_blank">Visit Twitter</a></p>
+    <p><a href="https://www.amazon.com" target="_blank">Visit Amazon</a></p>
+
+    <!-- Local File Link (same directory) -->
+    <p><a href="about.html">About Page (Same Folder)</a></p>
+
+    <!-- Local File in Subfolder -->
+    <p><a href="About/about.html">About Page (Subfolder)</a></p>
+
+    <!-- Local File in Parent Directory -->
+    <p><a href="../../index.html">Home (Parent Folder)</a></p>
+</body>
+</html>
