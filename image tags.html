@@ -1,0 +1,71 @@
+
+
+Here are examples and details on how to use the `<img>` tag:
+
+*   **Basic Syntax and `src` attribute**:
+    The `<img>` tag is a self-closing tag, meaning it doesn't have a separate closing tag like `</div>` or `<p>`. The most important attribute for the `<img>` tag is `src` (source), which specifies the path or URL of the image you want to display.
+
+    *   **Displaying an image from a URL (external source)**:
+        You can use an image's web address (URL) in the `src` attribute. For example, if you want to display a flower image from a website, you would copy its image address.
+        ```html
+        <img src="https://example.com/flower_image.jpg">
+        ```
+        In the source, an example was given where a flower image's URL was copied and used.
+
+    *   **Displaying a local image (from your system)**:
+        If the image is stored on your computer, you need to provide the correct path to that image relative to your HTML file.
+        *   **Image in the same folder as the HTML file**:
+            If your `flower.jpg` image is in the same folder as your HTML file, you can simply use the filename.
+            ```html
+            <img src="flower.jpg">
+            ```
+        *   **Image in a subfolder**:
+            If your image is in a subfolder, for example, `images` inside the folder where your HTML file is, you would specify the path as `images/flower.jpg`.
+            ```html
+            <img src="images/flower.jpg">
+            ```
+        It is crucial to have the **correct path and extension** for the image to display properly. Common extensions include `.jpg`, `.jpeg`, `.png`, and `.gif`. If the path, spelling, or extension is incorrect, the image will not display.
+
+*   **`alt` attribute (Alternative Text)**:
+    The `alt` attribute is used to provide alternative text for the image. This text is displayed if the image fails to load (e.g., due to a broken path or slow internet) or if a screen reader is being used. It's good practice to always include the `alt` attribute.
+    ```html
+    <img src="flower.jpg" alt="A beautiful flower">
+    ```
+
+*   **`width` and `height` attributes (Image Size)**:
+    You can control the size of the displayed image using the `width` and `height` attributes. These attributes accept values in pixels.
+    ```html
+    <img src="flower.jpg" alt="A beautiful flower" width="300" height="200">
+    ```
+    If you don't specify these attributes, the image will display at its **default size**. If the image path is incorrect, you might see a small broken image icon even if you've set `width` and `height`.
+
+*   **Making an Image Clickable with the `<a>` (Anchor) Tag**:
+    To make an image a clickable link, you can wrap the `<img>` tag inside an `<a>` (anchor) tag. The `href` attribute of the `<a>` tag specifies the destination URL when the image is clicked.
+    ```html
+    <a href="https://example.com/destination-page.html">
+        <img src="flower.jpg" alt="Click to learn more about flowers" width="300" height="200">
+    </a>
+    ```
+    In this example, clicking on the `flower.jpg` image will navigate the user to `https://example.com/destination-page.html`. This is similar to how a clickable text link works, but instead of text, an image is used as the clickable element.
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Image Tag Example</title>
+</head>
+<body>
+
+    <h2>Displaying an Image from a Local Folder</h2>
+    <img src="images/flower.jpg" alt="A beautiful flower" width="300" height="200">
+
+    <h2>Displaying an Image from an External URL</h2>
+    <img src="https://example.com/flower_image.jpg" alt="External flower image" width="300" height="200">
+
+    <h2>Clickable Image Link</h2>
+    <a href="https://example.com/destination-page.html">
+        <img src="images/flower.jpg" alt="Click to learn more about flowers" width="300" height="200">
+    </a>
+
+</body>
+</html>
