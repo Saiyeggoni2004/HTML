@@ -1,0 +1,72 @@
+*   Differentiate between `div` and `span` tags.
+*   It refers to `div` as "elementary separated", which in HTML context often implies its block-level nature, meaning it creates a new line and occupies the full available width.
+*   The source also mentions "background green" in relation to `span` and `div`. This is a common way to visually demonstrate the different display behaviours of these tags.
+
+To help you understand how these concepts are typically exemplified, here are illustrative examples, though please note that **these specific code examples are not present in the provided source material and are external information you may wish to verify independently.**
+
+**Illustrative Examples of `div` and `span` Tags:**
+
+The fundamental difference often shown in examples is that `div` is a **block-level element**, while `span` is an **inline element**.
+
+*   **`div` (Block-Level Element):**
+    A `div` element typically starts on a new line and takes up the full width available to it. When styled with a background colour, this block-level behaviour becomes evident.
+
+    For example, if you had two `div` elements, even with minimal content, they would stack vertically:
+
+    ```html
+    <div style="background-color: lightblue;">
+        This is a div. It takes up the full width.
+    </div>
+    <div style="background-color: lightcoral;">
+        This is another div. It starts on a new line.
+    </div>
+    ```
+
+    In this context, the mention of `div` being "elementary separated" highlights its characteristic of creating a distinct, separated block of content. Applying a "background green" or any other background colour to a `div` would show this block covering the entire width of its container.
+
+*   **`span` (Inline Element):**
+    A `span` element does not start on a new line and only takes up as much width as its content requires. It's used to apply styles or manipulate a small portion of content within a larger line of text.
+
+    For example, if you wanted to highlight a specific word or phrase within a paragraph:
+
+    ```html
+    <p>
+        This is a sentence with some <span style="background-color: lightgreen;">highlighted text</span> within it.
+        Notice how the highlight only covers the words, not the whole line.
+    </p>
+    ```
+
+    Here, the "background green" (or `lightgreen` in this case) would only appear behind the words "highlighted text", demonstrating `span`'s inline nature without disrupting the flow of the paragraph.
+
+These examples visually clarify the distinction between block-level and inline elements, which is a core aspect of understanding `div` and `span` tags that the source alludes to.
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Div vs Span Example</title>
+<style>
+div{
+            background-color: lightblue;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+span{
+            background-color: lightgreen;
+            padding: 2px 5px;
+        }
+    </style>
+</head>
+<body>
+<fieldset>
+    <div>
+        This is a <strong>div</strong> block. It starts on a new line and stretches the full width.
+    </div>
+</fieldset>
+
+    <p>
+        This is a paragraph with a <span>span</span> inside it.
+        The span only highlights a few words inline.
+    </p>
+
+</body>
+</html>
