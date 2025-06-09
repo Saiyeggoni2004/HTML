@@ -1,0 +1,40 @@
+The `<iframe>` tag in HTML is used to **embed another HTML document within the current HTML document**. This allows you to display content from other sources directly on your webpage.
+
+Here are some examples of what you can embed or display using the `<iframe>` tag:
+
+*   **Embedding YouTube Videos**: You can embed YouTube videos into your webpage. This is a common use case for the `<iframe>` tag to display online videos. To do this, you would typically use the `src` attribute to point to the YouTube video's embed URL. For example, a YouTube video's embed code would be copied and pasted into your HTML using the `<iframe>` tag. This allows the video to play directly on your website.
+*   **Displaying Other Webpages**: You can display any webpage from the internet within your HTML file using the `<iframe>` tag. This means you can show content from another website directly on your own page.
+    *   **Specifying Dimensions**: When embedding a webpage, you can control its size using the `width` and `height` attributes. These can be set in pixels. For instance, you could set `width="500"` and `height="300"` to specify the frame's dimensions.
+    *   **Controlling Borders**: The `frameborder` attribute can be used to add or remove a border around the `<iframe>`. Setting `frameborder="0"` will remove the border.
+    *   **Managing Scrolling**: The `scrolling` attribute allows you to manage scrollbars for the embedded content.
+        *   `scrolling="yes"` ensures scrollbars are always present.
+        *   `scrolling="no"` prevents scrollbars from appearing.
+        *   `scrolling="auto"` (the default) allows the browser to automatically decide whether scrollbars are needed based on the content size. If the content fits within the specified `width` and `height`, scrollbars won't appear; otherwise, they will.
+*   **Embedding PDF Documents**: You can also embed PDF documents into your webpage. Similar to embedding a webpage, you would use the `src` attribute to specify the location of the PDF file. When a PDF document is embedded, it may display options like download and print directly within the frame.
+
+The `<iframe>` tag essentially acts like a window, allowing you to display external content – whether it's a video, another website, or a document – directly within your current HTML page.
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Iframe Examples</title>
+</head>
+<body>
+
+    <h2>1. Embed YouTube Video</h2>
+    <iframe width="560" height="315" 
+        src="https://www.youtube.com/embed/aK12VwhHH9s?si=BI4_-NphYx-vz0ij" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>" 
+        frameborder="0" 
+        allowfullscreen>ss
+    </iframe>
+ <hr>
+
+    <h2>3. Embed a PDF Document</h2>
+    <iframe 
+        src="python essential.pdf" 
+        width="600" 
+        height="400" 
+        frameborder="0">
+    </iframe>
+</body>
+</html>
