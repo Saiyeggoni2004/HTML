@@ -1,0 +1,60 @@
+The `details` and `summary` tags in HTML are used together to create a disclosure widget, allowing you to show or hide additional content.
+
+
+Imagine you have a section with a title and want to hide some explanatory text until a user clicks on the title.
+
+**HTML Structure:**
+
+```html
+<details>
+  <summary>Introduction</summary>
+  <p>This is Paragraph 1. It contains the actual content that is hidden by default.</p>
+</details>
+```
+
+
+**Explanation of the example:**
+
+*   **`<details>` tag:** This tag acts as an "envelope" for the content you want to hide or show. It creates an arrow button by default.
+*   **`<summary>` tag:** This tag is placed inside the `<details>` tag. It defines the visible heading or title for the disclosure widget. In this example, "Introduction" would be the text always visible to the user.
+*   **`<p>This is Paragraph 1...</p>`:** This is the actual content (a paragraph in this case) that will be displayed or hidden. It is nested within the `<details>` tag, but *outside* of the `<summary>` tag.
+
+**Behaviour:**
+
+1.  **Initially (by default):** When the web page loads, you will only see the "Introduction" text along with an arrow (typically pointing to the right or down). The paragraph "This is Paragraph 1..." will be hidden.
+2.  **Upon clicking:** If you click on the "Introduction" text or the arrow button, the arrow will change direction (e.g., point downwards), and the hidden content, "This is Paragraph 1. It contains the actual content that is hidden by default.", will become visible.
+3.  **Clicking again:** If you click on the "Introduction" text or the arrow again, the content will collapse and become hidden once more.
+
+This setup allows you to group content and initially show only the title, providing a cleaner interface until the user needs to see the supplementary details.
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Details and Summary Example</title>
+</head>
+<body>
+
+    <h2>Course Content</h2>
+
+    <details>
+        <summary>Introduction</summary>
+        <p>This is Paragraph 1. It contains the actual content that is hidden by default. 
+           You can use the details and summary tags to reveal more information when needed.</p>
+    </details>
+
+    <details>
+        <summary>Module 1: HTML Basics</summary>
+        <ul>
+            <li>What is HTML?</li>
+            <li>HTML Tags and Elements</li>
+            <li>Block vs Inline Elements</li>
+        </ul>
+    </details>
+
+    <details>
+        <summary>Module 2: CSS Basics</summary>
+        <p>This section covers how to style web pages using CSS.</p>
+    </details>
+
+</body>
+</html>
